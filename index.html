@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Library — Sistema de Gestión Bibliotecaria</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="brand">
+        <span class="brand-icon">📚</span>
+        <span class="brand-title">Manager Library</span>
+      </div>
+      <nav class="nav">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#reglas">Reglamento</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#acerca">Ficha ADSO</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="badge">ADSO 3413974 · SENA</span>
+        <h1>Gestión moderna y confiable para nuestra biblioteca</h1>
+        <p>Una plataforma diseñada para administrar el catálogo, controlar préstamos con reglas estrictas de negocio y garantizar la máxima consistencia en cada transacción.</p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-primary">Explorar Catálogo</a>
+          <a href="#reglas" class="btn btn-secondary">Políticas de Préstamo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Categorías y Catálogo</h2>
+          <p>Cinco clasificaciones esenciales con más de 40 títulos para toda la comunidad.</p>
+        </div>
+        <div class="category-grid">
+          <div class="card cat-card">
+            <div class="card-icon">📖</div>
+            <h3>Novela</h3>
+            <p>Obras maestras de la literatura latinoamericana y universal: García Márquez, Cortázar, Borges y Cervantes.</p>
+          </div>
+          <div class="card cat-card">
+            <div class="card-icon">🔬</div>
+            <h3>Ciencia</h3>
+            <p>Divulgación científica, física, evolución y astronomía: Sagan, Hawking, Darwin y Harari.</p>
+          </div>
+          <div class="card cat-card">
+            <div class="card-icon">💻</div>
+            <h3>Tecnología</h3>
+            <p>Ingeniería de software, patrones de diseño y desarrollo limpio: Martin Fowler, Robert C. Martin y Eric Evans.</p>
+          </div>
+          <div class="card cat-card">
+            <div class="card-icon">🏛️</div>
+            <h3>Historia</h3>
+            <p>Crónicas históricas, civilizaciones y relatos del siglo XX: Dickens, Diamond, Beevor y Tuchman.</p>
+          </div>
+          <div class="card cat-card">
+            <div class="card-icon">🧸</div>
+            <h3>Infantil</h3>
+            <p>Lecturas para imaginar y descubrir: El Principito, Matilda, Charlie y Alicia en el país de las maravillas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reglas" class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Reglamento de Préstamos</h2>
+          <p>Diseñado bajo especificación rigurosa (SDD) para asegurar equidad de acceso a los ejemplares.</p>
+        </div>
+        <div class="rules-grid">
+          <div class="rule-box">
+            <div class="rule-num">1</div>
+            <div>
+              <h4>Límite de Ejemplares</h4>
+              <p>Cada socio puede tener un máximo de <strong>3 libros sin devolver</strong> a la vez.</p>
+            </div>
+          </div>
+          <div class="rule-box">
+            <div class="rule-num">2</div>
+            <div>
+              <h4>Plazo de 14 Días</h4>
+              <p>El préstamo vence exactamente 14 días después del registro en instantes UTC.</p>
+            </div>
+          </div>
+          <div class="rule-box">
+            <div class="rule-num">3</div>
+            <div>
+              <h4>Bloqueo por Vencimientos</h4>
+              <p>Los socios con algún libro vencido no pueden solicitar nuevos préstamos hasta ponerse al día.</p>
+            </div>
+          </div>
+          <div class="rule-box">
+            <div class="rule-num">4</div>
+            <div>
+              <h4>Transaccionalidad Estricta</h4>
+              <p>El descuento de inventario y el registro del préstamo son indivisibles con concurrencia optimista.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="arquitectura" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Diseño Técnico y Arquitectura</h2>
+          <p>Construido sobre principios innegociables de Arquitectura Hexagonal y Spec-Driven Development.</p>
+        </div>
+        <div class="arch-grid">
+          <div class="arch-card">
+            <h4>Dominio Puro</h4>
+            <p>Objetos de valor y entidades independientes del framework (PHP 8.4 nativo, inmutables).</p>
+          </div>
+          <div class="arch-card">
+            <h4>Puertos y Adaptadores</h4>
+            <p>Casos de uso desacoplados de persistencia (PostgreSQL 16), almacenamiento de portadas y seguridad JWT.</p>
+          </div>
+          <div class="arch-card">
+            <h4>Gana el Motor</h4>
+            <p>Restricciones de integridad referencial, índices únicos parciales y CHECK a nivel de base de datos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p><strong>Manager Library</strong> · Prueba técnica Ficha ADSO 3413974 · SENA</p>
+      <p class="muted">Sitio público estático independiente de la API. Diseñado para escritorio y dispositivos móviles.</p>
+    </div>
+  </footer>
+</body>
+</html>
